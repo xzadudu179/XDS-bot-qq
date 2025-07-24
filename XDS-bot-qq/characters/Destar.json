@@ -1,0 +1,17 @@
+{
+    "bot_info": {
+        "name": "漠星",
+        "author": "xzadudu179",
+        "nickname": [
+            "Destar",
+            "destar",
+            "漠星"
+        ],
+        "feedbacks": {}
+    },
+    "plugins": {
+        "anti_messagebursts": {
+            "message_bursts": "检测到了刷屏：用户 \"{user}\" 在 {secs} 秒内发了 {count} 条消息，尝试禁言 {mins} 分钟"
+        }
+    }
+}

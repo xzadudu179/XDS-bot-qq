@@ -1,2 +1,3 @@
 [tool.nonebot]
-plugin_dirs = ["XDS-bot-qq-dev/plugins"]
+plugin_dirs = ["XDS-bot-qq/plugins"]
+adapters = [{name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11"}]
