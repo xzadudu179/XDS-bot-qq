@@ -4,7 +4,7 @@ from xmetools.bottools import check_group_stats
 from nonebot import logger
 from nonebot.adapters.onebot.v11.permission import GROUP_ADMIN, GROUP_OWNER
 from xmetools.chactools import get_message
-from xmetools.bottools import get_group_member_name
+from xmetools.bottools import get_group_member_name, bot_isadmin
 from nonebot.plugin import PluginMetadata, on_message
 from nonebot.adapters.onebot.v11.event import GroupMessageEvent
 import time
@@ -27,7 +27,7 @@ global_config = get_driver().config
 
 anti_messagebursts = on_message(priority=3, block=True)
 @anti_messagebursts.handle()
-@check_group_stats(config=get_plugin_config(__plugin_meta__.config), self_permissions=(GROUP_ADMIN, GROUP_OWNER))
+@check_group_stats(config=get_plugin_config(__plugin_meta__.config), permissions=[bot_isadmin])
 async def handle_message(event: GroupMessageEvent):
     config = get_plugin_config(__plugin_meta__.config)
     bot = get_bot()
